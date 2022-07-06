@@ -1,8 +1,9 @@
-import { type } from "@testing-library/user-event/dist/type";
+// import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
 
 const Pokemon = (props) => {
     const { pokemon } = props;
+
     return (
         <div className="pokemon-card">
             <div className="pokemon-img">
