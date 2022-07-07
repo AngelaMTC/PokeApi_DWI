@@ -19,7 +19,7 @@ const Search = (props) => {
   return (
     <div className="search-container">
       <div className="search">
-        <input placeholder="Buscar pokemon..." onChange={onChange} />
+        <input placeholder="Buscar entre todos los pokemones... (Favor de poner el nombre completo)." onChange={onChange} />
       </div>
       <div className="search-btn">
         <button onClick={onClick}>Buscar</button>

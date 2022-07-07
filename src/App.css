@@ -136,8 +136,18 @@
   padding: 10px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-  border: none;
+  border: outset;
   width: 100%;
+  margin-top: 4px;
+}
+
+.inputSearch {
+  padding: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: solid;
+  width: 45%;
+  margin-top: 4px;
 }
 
 .search input:focus {
@@ -145,11 +155,42 @@
 }
 
 .search-btn button {
-  background-color: #34683f;
+  background-image: linear-gradient( rgb(127, 37, 113), rgb(135, 32, 89) );
   border: none;
   border-radius: 10px;
   height: 100%;
   color: white;
   padding: 10px 12px;
   margin-left: 20px;
+}
+
+.search-btn button:hover {
+  background-image: linear-gradient( rgb(134, 43, 164), rgb(70, 42, 71) );
+  border: none;
+  border-radius: 10px;
+  height: 100%;
+  color: white;
+  padding: 10px 12px;
+  margin-left: 20px;
+}
+
+.not-found-text {
+  text-align: center;
+  color: rgb(97, 212, 30);
+  font-size: 1.25rem;
+  padding-bottom: 46%;
+  /* background: rgba(0,0,0,0.8);     */
+}
+
+.not-found-text-pokemon {
+  background: rgba(0,0,0,0.8);    
+
+}
+
+.container-filter {
+border-radius: '15px';
+ height: '35px';
+ border: 'solid transparent 0px';
+ padding-left: '15px';
+width: '250px';
 }
