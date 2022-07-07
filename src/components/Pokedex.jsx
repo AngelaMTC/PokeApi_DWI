@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import Pokemon from "./Pokemon";
-import { useSearchParams } from "react-router-dom";
-
 // import Pokemones from "./Pokemones";
+import { FiltroData } from "../context/global/global.context";
 
 const Pokedex = (props) => {
-let [searchParams, setSearchParams] = useSearchParams();
-
+    const filterData = FiltroData();
     const {pokemons, page, setPage, total} = props;
+    const [array, setArray] = useState([]);
     // console.log(pokemons);
+
+    useEffect(() => {
+        setArray(pokemons);
+    }, [pokemons]);
+
+    useEffect(() => {
+        setArray([]);
+        if(array.length > 0) {
+            pokemons.filter((data) => {
+                if(data.name.toString().toLowerCase().includes(filterData.datosBusqueda)){
+                    setArray((current) => [...current, data]);  
+                }
+            });
+        }else{
+            setArray(pokemons);
+        }
+    }, [filterData]);
 
     const anteriorPagina = () => {
         const siguientePagina = Math.max(page - 1, 0);
@@ -29,21 +45,8 @@ let [searchParams, setSearchParams] = useSearchParams();
             </div>
             <div><Pagination page={page + 1} totalPages={total} onAnteriorClick={anteriorPagina} onSiguienteClick={siguientePagina}/></div>
             
-            <input className="inputSearch" placeholder="Buscar pokemon..." value={searchParams.get("filter") || "" } onChange={(event) => { let filter = event.target.value;
-                if(filter) {
-                setSearchParams({filter});
-                }else{
-                    setSearchParams({});
-                }
-               }} type="text" />
-            
             <div className="pokedex-grid">
-                {pokemons.filter((pokemon) => {
-                    let filter = searchParams.get("filter");
-                    if(!filter) return true;
-                    let name = pokemon.name.toLowerCase();
-                    return name.startsWith(filter.toLowerCase());
-                }).map((pokemon, idx) => {
+                {array.slice(0, 10).map((pokemon, idx) => {
                     return (
                         // <div key={pokemon.name}>#{idx+1}: {pokemon.name}</div>
                         <Pokemon pokemon={pokemon} key={pokemon.name}/>

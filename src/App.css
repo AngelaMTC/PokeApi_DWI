@@ -138,6 +138,7 @@
   border-radius: 3px;
   border: outset;
   width: 100%;
+  margin-top: 4px;
 }
 
 .inputSearch {
@@ -173,8 +174,23 @@
   margin-left: 20px;
 }
 
-/* .not-found-text {
+.not-found-text {
   text-align: center;
+  color: rgb(97, 212, 30);
   font-size: 1.25rem;
-  padding: 20px;
-} */
+  padding-bottom: 46%;
+  /* background: rgba(0,0,0,0.8);     */
+}
+
+.not-found-text-pokemon {
+  background: rgba(0,0,0,0.8);    
+
+}
+
+.container-filter {
+border-radius: '15px';
+ height: '35px';
+ border: 'solid transparent 0px';
+ padding-left: '15px';
+width: '250px';
+}
