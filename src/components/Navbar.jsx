@@ -11,10 +11,19 @@ const Navbar = () => {
 
     const { i18n, t } = useTranslation();
 
+  function changeLanguage(language) {
+    i18n.changeLanguage(language);
+  }
+
 
     return (
         <div className="header">
 
+<div className='btn-language'>
+    <button id="btn-es" className={`App-link ${ i18n.language === "es" ? "selected" : "unselected"}`} onClick={() => changeLanguage("es")}>Español</button>
+    <button id="btn-en" className={`App-link ${ i18n.language === "en" ? "selected" : "unselected"}`} onClick={() => changeLanguage("en")}>Inglés</button>
+  
+    </div>
                 <center>
                 <div>
                     <img className="imgNavbar" src={Image} alt="" />

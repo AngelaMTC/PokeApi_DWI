@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import Home from './components/Home';
 import About from './components/About';
+import PokemonId from './components/pokemonId'
 
 //Routes:
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -28,6 +29,7 @@ root.render(
           <Route path="/" element={<Home />}></Route>
           <Route path="/Pokemones" element={<App />}></Route>
           <Route path="/191243" element={<About />}></Route>
+          <Route path="/pokemons/pokemonId" element={<PokemonId />}></Route>
           {/* </GlobalProvider> */}
         </Routes>
     </I18nextProvider>

@@ -4,7 +4,14 @@
     "About": "About",
     "Previous": "Previous",
     "Next": "Next",
-    "Information": "Information"
+    "Information": "Information",
+    "Search pokemon..." : "Search pokemon...",
+    "Name": "Name",
+    "Subject": "Subject",
+    "Carrier/Degree/Group": "Carrier/Degree/Group",
+    "Enrollment": "Enrollment",
+    "Return": "Return",
+    "Comprehensive Web Development": "Comprehensive Web Development"
 
 
 }

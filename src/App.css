@@ -1,4 +1,4 @@
-.App{
+.App {
   text-align: center;
   background-image: url(./images/backPokemon2.jpg);
   /* background-image: url(./images/backgroundPokemon.gif); */
@@ -42,7 +42,7 @@
   width: 80px;
   height: 80px;
   /* margin-right: 10px; */
-  padding: 10px;
+  padding: 30px;
 }
 
 .card {
@@ -83,8 +83,9 @@
 .btn-anterior {
   /* background-color: rgb(79, 79, 175); */
   /* padding: 20px ; */
-  border: solid 2px rgb(101, 159, 213);
-  background-color: rgb(101, 159, 213);
+  border: solid 2px rgb(83, 215, 94);
+  background-color: rgb(83, 215, 94);
+  border-radius: 5px;
   width: 150px;
   height: 35px;
   cursor: pointer;
@@ -93,7 +94,7 @@
 }
 
 .btn-anterior:hover {
-  background-image: linear-gradient(rgb(54, 105, 173), rgb(127, 137, 152));
+  background-image: linear-gradient( rgb(53, 188, 60), rgb(118, 149, 123));
   width: 150px;
   height: 35px;
 }
@@ -103,6 +104,7 @@
   /* padding: 20px ; */
   border: solid 2px rgb(83, 215, 94);
   background-color: rgb(83, 215, 94);
+  border-radius: 5px;
   width: 150px;
   height: 35px;
   cursor: pointer;
@@ -117,7 +119,7 @@
 }
 
 .paginas {
-  color: rgb(26, 255, 0);
+  color: rgb(241, 233, 0);
   /* width: 50%; */
 
 }
@@ -214,8 +216,16 @@
 }
 
 .infoPoke {
+  background-image: linear-gradient(rgb(90, 86, 91), rgb(162, 162, 162));
+  border-radius: 15px;
   margin: 8px;
-  padding: 4px;
+  padding: 10px;
+  width: 80%;
+}
+
+.infoPoke:hover {
+  background-image: linear-gradient(rgb(169, 48, 209), rgb(70, 42, 71));
+
 }
 
 .infoAlumno {
@@ -229,7 +239,7 @@
 
 .inputPoke {
   border-radius: 10px;
-  border: solid;
+  border: solid blue;
   width: 96%;
   height: 25px;
   text-align: center;
@@ -239,10 +249,24 @@
   width: 20%;
 }
 
-.btn-home, .btn-pokemones, .btn-about{ 
+.btn-home,
+.btn-pokemones,
+.btn-about {
   text-decoration: none;
   color: #f2f2f2;
-  background-color: blue;
+  background-image: linear-gradient(rgb(27, 15, 200), rgb(144, 142, 249));
+  padding: 7px;
+  border-radius: 12px;
+  margin: 12px;
+  margin-top: 5px;
+}
+
+.btn-home:hover,
+.btn-pokemones:hover,
+.btn-about:hover {
+  text-decoration: none;
+  color: #f2f2f2;
+  background-image: linear-gradient(rgb(255, 238, 0), rgb(148, 139, 2));
   padding: 7px;
   border-radius: 12px;
   margin: 12px;
@@ -259,5 +283,22 @@
 }
 
 .btn-language {
-  padding: 8px;
+  display: flex;
 }
+
+#btn-es,
+#btn-en {
+  background-color: rgb(36, 36, 36);
+  color: #afadad;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  /* margin-right: 20px; */
+}
+
+/* #btn-es:hover,
+#btn-en:hover {
+  background-image: linear-gradient(rgb(224, 36, 36)rgb(157, 157, 152));
+  padding: 5px;
+  margin: 5px;
+} */

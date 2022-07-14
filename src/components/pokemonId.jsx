@@ -1,10 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
 
 const PokemonId = (props) => {
     const { pokemon } = props;
+    const { i18n, t } = useTranslation();
+
     return (
         <div className="pokemon-card">
-            
+
             <div className="pokemon-img">
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             </div>
@@ -24,7 +29,9 @@ const PokemonId = (props) => {
                         })}
                     </div>
                     <div>
-                        <button className="backMenu">Volver</button>
+                        {/* <button className="backMenu">Volver</button> */}
+                        <Link className="btn-home" to="/Home">{t("Return")}</Link>
+
                     </div>
                 </div>
             </div>
