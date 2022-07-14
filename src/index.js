@@ -13,21 +13,25 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // GlobalProvider:
 // import { GlobalProvider } from './context/global/global.context';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './config/localization/i18n'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <BrowserRouter>
-    {/* <App /> */}
-    <Routes>
-      {/* <GlobalProvider> */}
-    <Route path="/" element={<Home />}></Route>
-    <Route path="/Pokemones" element={<App />}></Route>
-    <Route path="/About" element={<About />}></Route>
-    {/* </GlobalProvider> */}
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        {/* <App /> */}
+    <I18nextProvider i18n={i18n}>
+        <Routes>
+          {/* <GlobalProvider> */}
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/Pokemones" element={<App />}></Route>
+          <Route path="/191243" element={<About />}></Route>
+          {/* </GlobalProvider> */}
+        </Routes>
+    </I18nextProvider>
+      </BrowserRouter>
 
   </React.StrictMode>
 );

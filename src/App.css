@@ -254,5 +254,10 @@
 }
 
 .imgHome {
-  width: auto;
+  width: 100%;
+
+}
+
+.btn-language {
+  padding: 8px;
 }

@@ -4,9 +4,10 @@ import Pokedex from './components/Pokedex';
 import { getPokemones, getPokemonesData, searchPokemon } from './Api';
 import Search from './components/Search';
 import { FiltroConsumer, FiltroData, FiltroProvider } from './context/global/global.context';
+import { useEffect, useState } from "react";
 
 // GlobalContext:
-import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 //import { GlobalContext } from './context/global/global.context';
 
 export default () => <FiltroProvider>
@@ -21,6 +22,14 @@ const App = () => {
   const [total, setTotal] = useState(0);
   const [notFound, setNotFound] = useState(false);
   const [searching, setSearching] = useState(false);
+
+  const { i18n, t } = useTranslation();
+
+  function changeLanguage(language) {
+    i18n.changeLanguage(language);
+  }
+
+  console.log(i18n.language);
 
   const fetchPokemones = async () => {
     try {
@@ -63,9 +72,15 @@ const App = () => {
   return (
 
     <div className='App'> 
+    
       {/* <Search onSearch={onSearch}/> {notFound ? (<div className="not-found-text"> No se encontró el Pokemon. </div>) :  */}
       <Pokedex pokemons={pokemons} page={page} setPage={setPage} total={total}/> 
-      {/* } */}
+      <div className='btn-language'>
+    <button className={`App-link ${ i18n.language === "es" ? "selected" : "unselected"}`} onClick={() => changeLanguage("es")}>Español</button>
+    <button className={`App-link ${ i18n.language === "en" ? "selected" : "unselected"}`} onClick={() => changeLanguage("en")}>Inglés</button>
+  
     </div>
+    </div>
+    
   )
 }

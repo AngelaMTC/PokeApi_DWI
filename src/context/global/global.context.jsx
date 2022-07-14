@@ -25,7 +25,7 @@ export function FiltroConsumer(props) {
         <div className="container-filter">
             <Navbar></Navbar>
             <center>
-            <input className="inputPoke" placeholder="Buscar pokemon..." type="text" onChange={(e) => setDatosBusqueda(e.target.value)}/>        
+            <input className="inputPoke" placeholder="Search pokemon..." type="text" onChange={(e) => setDatosBusqueda(e.target.value)}/>        
             </center>
         </div>                
     )

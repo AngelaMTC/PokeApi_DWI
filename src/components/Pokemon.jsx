@@ -1,7 +1,11 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
+
 
 const Pokemon = (props) => {
     const { pokemon } = props;
+    const { i18n, t } = useTranslation();
+
     return (
         <div className="pokemon-card">
             
@@ -24,7 +28,7 @@ const Pokemon = (props) => {
                         })}
                     </div>
                     <div>
-                        <button className="infoPoke">Information</button>
+                        <button className="infoPoke">{t("Information")}</button>
                     </div>
                 </div>
             </div>
