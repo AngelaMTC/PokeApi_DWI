@@ -63,8 +63,9 @@ const App = () => {
   return (
 
     <div className='App'> 
-      <Search onSearch={onSearch}/> {notFound ? (<div className="not-found-text"> No se encontró el Pokemon. </div>) : 
-      <Pokedex pokemons={pokemons} page={page} setPage={setPage} total={total}/> }
+      {/* <Search onSearch={onSearch}/> {notFound ? (<div className="not-found-text"> No se encontró el Pokemon. </div>) :  */}
+      <Pokedex pokemons={pokemons} page={page} setPage={setPage} total={total}/> 
+      {/* } */}
     </div>
   )
 }

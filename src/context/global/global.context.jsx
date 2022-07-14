@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
+import Navbar from "../../components/Navbar";
 import { useState } from "react";
+
 
 const FiltroContext = React.createContext({
     datosBusqueda: "",
@@ -21,8 +23,9 @@ export function FiltroConsumer(props) {
     const { datosBusqueda, setDatosBusqueda } = useContext(FiltroContext);
     return(          
         <div className="container-filter">
+            <Navbar></Navbar>
             <center>
-            <input style={{borderRadius: '15px', height: '35px', border: 'solid', paddingLeft: '15px', width: '300px'}} placeholder="Buscar pokemon" type="text" onChange={(e) => setDatosBusqueda(e.target.value)}/>        
+            <input className="inputPoke" placeholder="Buscar pokemon..." type="text" onChange={(e) => setDatosBusqueda(e.target.value)}/>        
             </center>
         </div>                
     )

@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Componentes:
+import App from './App';
+import Home from './components/Home';
+import About from './components/About';
 
 //Routes:
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -18,7 +22,9 @@ root.render(
     {/* <App /> */}
     <Routes>
       {/* <GlobalProvider> */}
-    <Route path="/" element={<App />}></Route>
+    <Route path="/" element={<Home />}></Route>
+    <Route path="/Pokemones" element={<App />}></Route>
+    <Route path="/About" element={<About />}></Route>
     {/* </GlobalProvider> */}
     </Routes>
     </BrowserRouter>

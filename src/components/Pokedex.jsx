@@ -39,10 +39,6 @@ const Pokedex = (props) => {
 
     return (
         <div>
-            <div className="header">
-                <h1>Pokedex</h1>
-                <h3>Talamantes Castañeda Ángela María ~191243.</h3>
-            </div>
             <div><Pagination page={page + 1} totalPages={total} onAnteriorClick={anteriorPagina} onSiguienteClick={siguientePagina}/></div>
             
             <div className="pokedex-grid">

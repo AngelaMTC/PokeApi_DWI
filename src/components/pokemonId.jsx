@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pokemon = (props) => {
+const PokemonId = (props) => {
     const { pokemon } = props;
     return (
         <div className="pokemon-card">
@@ -24,7 +24,7 @@ const Pokemon = (props) => {
                         })}
                     </div>
                     <div>
-                        <button className="infoPoke">Information</button>
+                        <button className="backMenu">Volver</button>
                     </div>
                 </div>
             </div>
@@ -32,4 +32,4 @@ const Pokemon = (props) => {
     )
 }
 
-export default Pokemon;
+export default PokemonId;
