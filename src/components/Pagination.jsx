@@ -6,7 +6,7 @@ const Pagination = (props) => {
 
     const {onAnteriorClick, onSiguienteClick, page, totalPages} = props;
 
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
 
 
     return (

@@ -29,8 +29,8 @@ const Navbar = () => {
                     <img className="imgNavbar" src={Image} alt="" />
                 </div>
                 <div className="btns-navbar">
-                <Link className="btn-home" to="/">{t("Home")}</Link>
-                <Link className="btn-pokemones" to="/Pokemones">{t("Pokemons")}</Link>
+                <Link className="btn-home" to="/">{t("HOME")}</Link>
+                <Link className="btn-pokemones" to="/pokemons">{t("Pokemons")}</Link>
                 <Link className="btn-about" to="/191243">{t("About")}</Link>
                 </div>
 

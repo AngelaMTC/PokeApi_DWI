@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {getPokemonesData} from '../Api';
 
 import { useTranslation } from 'react-i18next';
+import PokemonId from "./pokemonId";
 
 
 const Pokemon = (props) => {
     const { pokemon } = props;
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
+    
 
     return (
         <div className="pokemon-card">
@@ -31,7 +34,8 @@ const Pokemon = (props) => {
                     </div> */}
                 {/* <div> */}
                 {/* <button className="infoPoke">{t("Information")}</button> */}
-                <Link className="infoPoke" to="/pokemons/pokemonId">{t("Information")}</Link>
+                {/* <Link href={{pathname: '/pokemons/:pokemonId', query: {id: pokemon.id}}} className="infoPoke" to="/pokemons/PokemonId">{t("Information")}</Link> */}
+                <Link onClick={getPokemonesData} className="infoPoke" to="/pokemons/:pokemonId">{t("Information")}</Link>
 
                 {/* </div> */}
                 {/* </div> */}

@@ -27,9 +27,9 @@ root.render(
         <Routes>
           {/* <GlobalProvider> */}
           <Route path="/" element={<Home />}></Route>
-          <Route path="/Pokemones" element={<App />}></Route>
+          <Route path="/pokemons" element={<App />}></Route>
           <Route path="/191243" element={<About />}></Route>
-          <Route path="/pokemons/pokemonId" element={<PokemonId />}></Route>
+          <Route path="/pokemons/:pokemonId" element={<PokemonId />}></Route>
           {/* </GlobalProvider> */}
         </Routes>
     </I18nextProvider>

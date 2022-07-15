@@ -215,15 +215,17 @@
   width: auto;
 }
 
-.infoPoke {
+.infoPoke, .btn-return {
   background-image: linear-gradient(rgb(90, 86, 91), rgb(162, 162, 162));
   border-radius: 15px;
   margin: 8px;
   padding: 10px;
   width: 80%;
+  text-decoration: none;
+  color: antiquewhite;
 }
 
-.infoPoke:hover {
+.infoPoke:hover, .btn-return:hover {
   background-image: linear-gradient(rgb(169, 48, 209), rgb(70, 42, 71));
 
 }
@@ -249,7 +251,6 @@
   width: 20%;
 }
 
-.btn-home,
 .btn-pokemones,
 .btn-about {
   text-decoration: none;
@@ -261,7 +262,6 @@
   margin-top: 5px;
 }
 
-.btn-home:hover,
 .btn-pokemones:hover,
 .btn-about:hover {
   text-decoration: none;
@@ -273,6 +273,25 @@
   margin-top: 5px;
 }
 
+.btn-home {
+  text-decoration: none;
+  color: #f2f2f2;
+  background-color:rgb(210, 55, 55);
+  padding: 7px;
+  border-radius: 12px;
+  margin: 12px;
+  margin-top: 5px;
+}
+
+.btn-home:hover {
+  text-decoration: none;
+  color: #f2f2f2;
+  background-image: linear-gradient(rgb(200, 15, 15), rgb(217, 176, 176));
+  padding: 7px;
+  border-radius: 12px;
+  margin: 12px;
+  margin-top: 5px;
+}
 .btns-navbar {
   padding: 10px;
 }
@@ -293,6 +312,7 @@
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
+  cursor: pointer;
   /* margin-right: 20px; */
 }
 
@@ -302,3 +322,7 @@
   padding: 5px;
   margin: 5px;
 } */
+
+.btn-return {
+
+}
