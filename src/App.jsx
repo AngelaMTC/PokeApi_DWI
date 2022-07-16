@@ -73,13 +73,9 @@ const App = () => {
 
     <div className='App'> 
     
-      {/* <Search onSearch={onSearch}/> {notFound ? (<div className="not-found-text"> No se encontró el Pokemon. </div>) :  */}
+      <Search onSearch={onSearch}/> {notFound ? (<div className="not-found-text"> No se encontró el Pokemon. </div>) : 
       <Pokedex pokemons={pokemons} page={page} setPage={setPage} total={total}/> 
-      {/* <div className='btn-language'>
-    <button className={`App-link ${ i18n.language === "es" ? "selected" : "unselected"}`} onClick={() => changeLanguage("es")}>Español</button>
-    <button className={`App-link ${ i18n.language === "en" ? "selected" : "unselected"}`} onClick={() => changeLanguage("en")}>Inglés</button>
-  
-    </div> */}
+  }
     </div>
     
   )

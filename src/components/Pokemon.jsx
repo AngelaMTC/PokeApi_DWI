@@ -35,7 +35,7 @@ const Pokemon = (props) => {
                 {/* <div> */}
                 {/* <button className="infoPoke">{t("Information")}</button> */}
                 {/* <Link href={{pathname: '/pokemons/:pokemonId', query: {id: pokemon.id}}} className="infoPoke" to="/pokemons/PokemonId">{t("Information")}</Link> */}
-                <Link onClick={getPokemonesData} className="infoPoke" to="/pokemons/:pokemonId">{t("Information")}</Link>
+                <Link  onClick={(e) => {window.location.href=`/pokemons/${pokemon.id}`}}className="infoPoke" to="/pokemons/:pokemonId">{t("Information")}</Link>
 
                 {/* </div> */}
                 {/* </div> */}
